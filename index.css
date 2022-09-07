@@ -48,6 +48,10 @@ main {
   background-color: var(--bg-main);
 }
 
+hr {
+  border: 1.5px solid var(--bg);
+}
+
 .day-container {
   display: flex;
   gap: .5em;
