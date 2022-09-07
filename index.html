@@ -69,12 +69,15 @@
     function appendData(data) {
       let dayContainer = document.getElementById("week");
       let totalHeight = 0;
+      let heightMax = 5;
+
       for (let index = 0; index < data.length; index++) {
         const element = data[index];
-        totalHeight += element.amount;
         let div = document.createElement("div");
+        totalHeight += element.amount;
+
         div.innerHTML = element.amount + " " + element.day;
-        div.style.height = `${element.amount}em`;
+        div.style.height = `${element.amount / 3}em`;
         dayContainer.appendChild(div);
       }
       console.log(totalHeight);
