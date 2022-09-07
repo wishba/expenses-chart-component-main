@@ -13,14 +13,6 @@
 
 }
 
-.txt__light {
-  color: var(--txt-light);
-}
-
-.txt__dark {
-  color: var(--txt-dark);
-}
-
 html {
   box-sizing: border-box;
   font-size: 18px;
@@ -44,6 +36,18 @@ p {
   padding: 0;
 }
 
+hr {
+  border: 1.5px solid var(--bg);
+}
+
+.txt__light {
+  color: var(--txt-light);
+}
+
+.txt__dark {
+  color: var(--txt-dark);
+}
+
 header {
   background-color: var(--clr-bar);
   padding: 1rem;
@@ -54,10 +58,10 @@ header {
   color: var(--bg);
 }
 
-.header__clr {
+.header__num {
   color: var(--bg-main);
   font-weight: 700;
-  font-size: 30px;
+  font-size: 1.5rem;
 }
 
 main {
@@ -69,20 +73,16 @@ main {
 
 .main__head {
   font-weight: 700;
-  font-size: 27px;
+  font-size: 1.5rem;
 }
 
 .main__total {
   font-weight: 700;
-  font-size: 35px;
+  font-size: 2rem;
 }
 
 .main__percent {
   font-weight: 700;
-}
-
-hr {
-  border: 1.5px solid var(--bg);
 }
 
 .day-container {
