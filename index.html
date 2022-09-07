@@ -69,20 +69,23 @@
     function findHighest(data) {
       let totalHeight = 0;
       let highest = 0;
+      let dayHighest = "";
 
       for (let index = 0; index < data.length; index++) {
         const element = data[index];
         // totalHeight += element.amount; // x = x + y
         totalHeight = totalHeight + element.amount;
 
-        // console.log(element.amount);
+        console.log(element);
         // highest = element.amount;
         if (highest < element.amount) {
           highest = element.amount
+          dayHighest = element.day;
         }
       }
       console.log(totalHeight);
       console.log(highest);
+      console.log(dayHighest);
     }
   </script>
 
