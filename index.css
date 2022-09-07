@@ -141,8 +141,13 @@ hr {
   margin: .3rem .3rem;
 }
 
+.day__bar:hover+.day__spend,
+.day__bar-highest:hover+.day__spend {
+  visibility: visible;
+}
+
 .day__spend {
-  /* visibility: hidden; */
+  visibility: hidden;
   transform: rotate(180deg);
   background-color: var(--txt-dark);
   color: var(--bg-main);
