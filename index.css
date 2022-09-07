@@ -57,6 +57,9 @@ hr {
   padding: 1rem;
   border-radius: .8rem;
   margin: 1rem;
+  background-image: url(images/logo.svg);
+  background-repeat: no-repeat;
+  background-position: right 1rem top 50%;
 }
 
 .header__txt {
