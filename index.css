@@ -39,8 +39,14 @@ body {
   background-color: var(--bg);
 }
 
+p {
+  margin: 0;
+  padding: 0;
+}
+
 header {
   background-color: var(--clr-bar);
+  padding: 1rem;
 }
 
 .header__txt {
@@ -55,6 +61,7 @@ header {
 
 main {
   background-color: var(--bg-main);
+  padding: 1rem;
 }
 
 .main__head {
@@ -80,6 +87,7 @@ hr {
   gap: .5em;
   flex-direction: row-reverse;
   transform: rotate(180deg);
+  margin-top: 3rem;
 }
 
 .day-container>* {
