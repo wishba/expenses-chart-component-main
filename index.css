@@ -107,8 +107,9 @@ hr {
   margin-top: 3rem;
 }
 
-.day-container>* {
+.day-container>div {
   flex: 1;
+  min-width: 0;
 }
 
 .day-container>*>* {
