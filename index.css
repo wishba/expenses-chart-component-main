@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
 
+:root {
+  --clr-bar: hsl(10, 79%, 65%);
+  --clr-bar-hi: hsl(186, 34%, 60%);
+}
+
 html {
   box-sizing: border-box;
   font-size: 18px;
@@ -19,12 +24,21 @@ body {
 
 .day-container {
   display: flex;
+  gap: .5em;
   flex-direction: row-reverse;
   transform: rotate(180deg);
 }
 
 .day-container>* {
-  background-color: gray;
+  flex: 1;
+}
+
+.day {
+  transform: rotate(180deg);
+}
+
+.day__bar {
+  background-color: var(--clr-bar);
 }
 
 .attribution {

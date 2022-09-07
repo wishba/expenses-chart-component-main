@@ -44,19 +44,25 @@
 
     function appendData(data) {
       let dayContainer = document.getElementById("week");
-      let totalHeight = 0;
-      let heightMax = 5;
+      // let totalHeight = 0;
+      // let heightMax = 5;
 
       for (let index = 0; index < data.length; index++) {
         const element = data[index];
         let div = document.createElement("div");
-        totalHeight += element.amount;
+        // let bar = document.querySelectorAll(".day__bar");
+        // totalHeight += element.amount;
 
-        div.innerHTML = element.amount + " " + element.day;
-        div.style.height = `${element.amount / 3}em`;
+        div.innerHTML = `
+          <p class="day">${element.day}</p>
+          <p class="day__bar" style="height: ${element.amount / 3}em"></p>
+        `;
+        // div.innerHTML = element.amount + " " + element.day;
+        // div.style.height = `${element.amount / 3}em`;
+        // bar.style.height = `${element.amount / 3}em`;
         dayContainer.appendChild(div);
       }
-      console.log(totalHeight);
+      // console.log(totalHeight);
     }
   </script>
 
