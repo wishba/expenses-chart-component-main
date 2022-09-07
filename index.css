@@ -79,6 +79,11 @@ main {
 .main__total {
   font-weight: 700;
   font-size: 2rem;
+  float: left;
+}
+
+.main__right {
+  text-align: right;
 }
 
 .main__percent {
