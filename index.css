@@ -41,11 +41,34 @@ body {
 
 header {
   background-color: var(--clr-bar);
+}
+
+.header__txt {
+  color: var(--bg);
+}
+
+.header__clr {
   color: var(--bg-main);
+  font-weight: 700;
+  font-size: 30px;
 }
 
 main {
   background-color: var(--bg-main);
+}
+
+.main__head {
+  font-weight: 700;
+  font-size: 27px;
+}
+
+.main__total {
+  font-weight: 700;
+  font-size: 35px;
+}
+
+.main__percent {
+  font-weight: 700;
 }
 
 hr {
