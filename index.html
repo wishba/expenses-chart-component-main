@@ -69,20 +69,20 @@
     function findHighest(data) {
       let highest = 0;
       let dayHighest = "";
-      let barClass = "day__bar";
+      let barClass = "day__bar-highest";
 
       for (let index = 0; index < data.length; index++) {
         const element = data[index];
         if (highest < element.amount) {
           highest = element.amount
           dayHighest = element.day;
-          barClass = "day__bar-highest";
           document.querySelector(".day__bar").className = barClass;
         }
       }
       console.log(highest);
       console.log(dayHighest);
-      console.log(barClass);
+      // console.log(barClass);
+      // document.querySelector(".day__bar").className = barClass;
     }
   </script>
 
