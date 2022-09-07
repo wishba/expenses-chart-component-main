@@ -41,6 +41,10 @@ body {
   background-color: var(--clr-bar);
 }
 
+.day__bar-highest {
+  background-color: var(--clr-bar-hi);
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;

@@ -41,7 +41,7 @@
     fetch("data.json")
       .then(res => res.json())
       .then(data => {
-        // appendData(data);
+        appendData(data);
         findHighest(data);
         // console.log(data);
       })
@@ -49,13 +49,13 @@
 
     function appendData(data) {
       let dayContainer = document.getElementById("week");
-      let totalHeight = 0;
+      // let totalHeight = 0;
 
       for (let index = 0; index < data.length; index++) {
         const element = data[index];
         let div = document.createElement("div");
         // totalHeight += element.amount; // x = x + y
-        totalHeight = totalHeight + element.amount;
+        // totalHeight = totalHeight + element.amount;
 
         div.innerHTML = `
           <p class="day">${element.day}</p>
@@ -63,29 +63,26 @@
         `;
         dayContainer.appendChild(div);
       }
-      console.log(totalHeight);
+      // console.log(totalHeight);
     }
 
     function findHighest(data) {
-      let totalHeight = 0;
       let highest = 0;
       let dayHighest = "";
+      let barClass = "day__bar";
 
       for (let index = 0; index < data.length; index++) {
         const element = data[index];
-        // totalHeight += element.amount; // x = x + y
-        totalHeight = totalHeight + element.amount;
-
-        console.log(element);
-        // highest = element.amount;
         if (highest < element.amount) {
           highest = element.amount
           dayHighest = element.day;
+          barClass = "day__bar-highest";
+          document.querySelector(".day__bar").className = barClass;
         }
       }
-      console.log(totalHeight);
       console.log(highest);
       console.log(dayHighest);
+      console.log(barClass);
     }
   </script>
 
