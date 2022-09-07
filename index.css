@@ -47,6 +47,7 @@ p {
 header {
   background-color: var(--clr-bar);
   padding: 1rem;
+  border-radius: .8rem;
 }
 
 .header__txt {
@@ -63,6 +64,7 @@ main {
   background-color: var(--bg-main);
   padding: 1rem;
   margin-top: 1rem;
+  border-radius: .8rem;
 }
 
 .main__head {
