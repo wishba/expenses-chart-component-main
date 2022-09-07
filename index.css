@@ -111,6 +111,11 @@ hr {
   flex: 1;
 }
 
+.day__bar:hover,
+.day__bar-highest:hover {
+  opacity: .5;
+}
+
 .day-container>*>* {
   color: var(--txt-light);
 }
