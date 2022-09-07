@@ -10,32 +10,27 @@
 </head>
 
 <body>
+  <header>
+    <p class="txt__light">My balance</p>
+    <p>$921.48</p>
+  </header>
 
-  <!-- <p>My balance</p>
-  <p>$921.48</p>
+  <main>
+    <p class="txt__dark">Spending - Last 7 days</p>
 
-  <p>Spending - Last 7 days</p>
+    <div id="week" class="day-container"></div>
 
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
+    <p class="txt__light">Total this month</p>
+    <p class="txt__dark">$478.33</p>
 
-  <p>Total this month</p>
-  <p>$478.33</p>
+    <p class="txt__dark">+2.4%</p>
+    <p class="txt__light">from last month</p>
+  </main>
 
-  <p>+2.4%</p>
-  <p>from last month</p> -->
-
-  <!-- <div class="attribution">
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
-  </div> -->
-
-  <div id="week" class="day-container"></div>
+  </footer>
 
   <script>
     fetch("data.json")
@@ -43,49 +38,36 @@
       .then(data => {
         appendData(data);
         findHighest(data);
-        // console.log(data);
       })
-
 
     function appendData(data) {
       let dayContainer = document.getElementById("week");
-      // let totalHeight = 0;
-
       for (let index = 0; index < data.length; index++) {
         const element = data[index];
         let div = document.createElement("div");
-        // totalHeight += element.amount; // x = x + y
-        // totalHeight = totalHeight + element.amount;
-
         div.innerHTML = `
           <p class="day">${element.day}</p>
           <p class="day__bar" style="height: ${element.amount / 4.5}em"></p>
         `;
         dayContainer.appendChild(div);
       }
-      // console.log(totalHeight);
     }
 
     function findHighest(data) {
       let highest = 0;
       let dayHighest = "";
-      let barClass = "day__bar-highest";
-
       for (let index = 0; index < data.length; index++) {
         const element = data[index];
         if (highest < element.amount) {
           highest = element.amount
           dayHighest = element.day;
-          document.querySelector(".day__bar").className = barClass;
+          document.querySelector(".day__bar").className = "day__bar-highest";
         }
       }
       console.log(highest);
       console.log(dayHighest);
-      // console.log(barClass);
-      // document.querySelector(".day__bar").className = barClass;
     }
   </script>
-
 </body>
 
 </html>
