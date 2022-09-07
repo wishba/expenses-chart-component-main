@@ -12,6 +12,16 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+    .day-container {
+      display: flex;
+      flex-direction: row-reverse;
+      transform: rotate(180deg);
+    }
+
+    .day-container>* {
+      background-color: gray;
+    }
+
     .attribution {
       font-size: 11px;
       text-align: center;
@@ -49,7 +59,7 @@
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
 
-  <div id="week"></div>
+  <div id="week" class="day-container"></div>
 
   <script>
     fetch("data.json")
@@ -58,12 +68,16 @@
 
     function appendData(data) {
       let dayContainer = document.getElementById("week");
+      let totalHeight = 0;
       for (let index = 0; index < data.length; index++) {
         const element = data[index];
+        totalHeight += element.amount;
         let div = document.createElement("div");
-        div.innerHTML = element.day + " " + element.amount;
+        div.innerHTML = element.amount + " " + element.day;
+        div.style.height = `${element.amount}em`;
         dayContainer.appendChild(div);
       }
+      console.log(totalHeight);
     }
   </script>
 
