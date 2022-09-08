@@ -129,10 +129,8 @@ hr {
   background-color: var(--clr-bar);
 }
 
-
-
 .day__bar-highest {
-  /* background-color: var(--clr-bar-hi); */
+  background-color: var(--clr-bar-hi);
 }
 
 .day__bar,
@@ -147,7 +145,7 @@ hr {
 }
 
 .day__spend {
-  /* visibility: hidden; */
+  visibility: hidden;
   transform: rotate(180deg);
   background-color: var(--txt-dark);
   color: var(--bg-main);
