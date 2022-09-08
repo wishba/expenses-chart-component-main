@@ -131,8 +131,16 @@ hr {
   /* margin: 0 .2rem .5rem; */
 }
 
-.day__bar-highest {
+div:nth-of-type(3) .day__bar-highest {
+  /* background-color: var(--clr-bar); */
   background-color: var(--clr-bar-hi);
+  /* margin: 0 .2rem .5rem; */
+  /* background-image: url(images/favicon-32x32.png); */
+}
+
+.day__bar-highest {
+  /* .day__bar-highest:last-child { */
+  /* background-color: var(--clr-bar-hi); */
   /* margin: 0 .2rem .5rem; */
 }
 
@@ -148,7 +156,7 @@ hr {
 }
 
 .day__spend {
-  visibility: hidden;
+  /* visibility: hidden; */
   transform: rotate(180deg);
   background-color: var(--txt-dark);
   color: var(--bg-main);
