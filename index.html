@@ -39,14 +39,11 @@
       .then(res => res.json())
       .then(data => {
         appendData(data);
-        // findHighest(data);
+        findHighest(data);
       })
 
     function appendData(data) {
       let dayContainer = document.getElementById("week");
-      let highest = "0";
-      // let less = "0";
-
       for (let index = 0; index < data.length; index++) {
         const element = data[index];
         let div = document.createElement("div");
@@ -56,36 +53,20 @@
           <p class="day__spend">${element.amount}</p>
         `;
         dayContainer.appendChild(div);
-
-        if (highest < element.amount) {
-          highest = element.amount;
-          // document.getElementById(`bar-${index}`).className = "day__bar-highest";
-          // document.getElementById(`bar-${index}`).className = "day__bar day__bar-highest";
-          // document.getElementById(`bar-${index}`).style.backgroundColor = "red";
-        } /* else if (highest > element.amount) {
-          document.getElementById(`bar-${index}`).style.backgroundColor = "blue";
-        } */
-      }
-
-      console.log(highest);
-      if (document.querySelector("p").innerHTML = highest) {
-        console.log(document.querySelector("p"));
       }
     }
 
     function findHighest(data) {
       let highest = 0;
-      let dayHighest = "";
       for (let index = 0; index < data.length; index++) {
         const element = data[index];
         if (highest < element.amount) {
-          highest = element.amount
-          dayHighest = element.day;
-          document.querySelector(".day__bar").className = "day__bar-highest";
+          highest = element.amount;
         }
       }
-      console.log(highest);
-      console.log(dayHighest);
+      if (document.querySelector("p").innerHTML = highest) {
+        console.log(document.querySelector("p"));
+      }
     }
   </script>
 </body>
