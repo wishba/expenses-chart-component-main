@@ -44,16 +44,35 @@
 
     function appendData(data) {
       let dayContainer = document.getElementById("week");
+      let highestAmount = 0;
+      let maxHeight = 10;
+
       for (let index = 0; index < data.length; index++) {
         const element = data[index];
+
+        if (highestAmount < element.amount) {
+          highestAmount = element.amount;
+        }
+
         let div = document.createElement("div");
         div.innerHTML = `
           <p class="day">${element.day}</p>
-          <p class="day__bar" id="bar-${element.amount}" style="height: ${element.amount / 4.5}em"></p>
+          <p class="day__bar" id="bar-${element.amount}"></p>
           <p class="day__spend">$${element.amount}</p>
         `;
         dayContainer.appendChild(div);
+
       }
+
+      for (let index = 0; index < data.length; index++) {
+        const element = data[index];
+        let bar = document.getElementById(`bar-${element.amount}`);
+        let styleHeight = element.amount * maxHeight / highestAmount;
+        bar.style.height = `${styleHeight}em`;
+      }
+
+      let highestBar = document.getElementById(`bar-${highestAmount}`);
+      highestBar.className = "day__bar-highest";
     }
 
     function findHighest(data) {
@@ -65,9 +84,6 @@
         }
       }
       console.log(highest);
-      let highestBar = document.getElementById(`bar-${highest}`);
-      highestBar.className = "day__bar-highest";
-      console.log(highestBar);
     }
   </script>
 </body>
