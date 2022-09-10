@@ -64,7 +64,7 @@
         const element = data[index];
         let bar = document.getElementById(`bar-${element.amount}`);
         let styleHeight = element.amount * maxHeight / highestAmount;
-        bar.style.height = `${styleHeight}em`;
+        bar.style.height = `${styleHeight}rem`;
       }
 
       let highestBar = document.getElementById(`bar-${highestAmount}`);
