@@ -37,10 +37,7 @@
   <script>
     fetch("data.json")
       .then(res => res.json())
-      .then(data => {
-        appendData(data);
-        findHighest(data);
-      })
+      .then(data => appendData(data))
 
     function appendData(data) {
       let dayContainer = document.getElementById("week");
@@ -61,7 +58,6 @@
           <p class="day__spend">$${element.amount}</p>
         `;
         dayContainer.appendChild(div);
-
       }
 
       for (let index = 0; index < data.length; index++) {
@@ -73,17 +69,6 @@
 
       let highestBar = document.getElementById(`bar-${highestAmount}`);
       highestBar.className = "day__bar-highest";
-    }
-
-    function findHighest(data) {
-      let highest = 0;
-      for (let index = 0; index < data.length; index++) {
-        const element = data[index];
-        if (highest < element.amount) {
-          highest = element.amount;
-        }
-      }
-      console.log(highest);
     }
   </script>
 </body>
